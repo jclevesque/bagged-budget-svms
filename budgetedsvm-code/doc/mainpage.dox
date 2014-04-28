@@ -1,0 +1,15 @@
+/*!
+\mainpage <a href="http://astro.temple.edu/~tuc17157/budgetedSVM/">BudgetedSVM</a> Documentation
+
+Thank you for using BudgetedSVM, a toolbox for training large-scale, non-linear classifiers. The toolbox implements the following four SVM/SVM-like algorithms for large-scale, non-linear classification:
+
+- Pegasos (<em>Shalev-Shwartz, S., Singer, Y., Srebro, N. Pegasos: Primal Estimated sub-GrAdient SOlver for SVM</em>, ICML, 2007)
+
+- AMM batch and AMM online (<em>Wang, Z., Djuric, N., Crammer, K., Vucetic, S., Trading Representability for Scalability: Adaptive Multi-Hyperplane Machine for Nonlinear Classification</em>, KDD, 2011)
+
+- BSGD (<em>Wang, Z., Crammer, K., Vucetic, S., Breaking the Curse of Kernelization: Budgeted Stochastic Gradient Descent for Large-Scale SVM Training</em>, JMLR, 2012)
+
+- LLSVM (<em>Zhang, K., Lan, L., Wang, Z., and Moerchen, F., Scaling up Kernel SVM on Limited Resources: A Low-rank Linearization Approach</em>, AISTATS, 2012)
+
+Please report any comments/bugs/praises to nemanja.djuric@temple.edu. We hope you will find this toolbox useful!
+*/

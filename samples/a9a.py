@@ -22,7 +22,9 @@
 # SOFTWARE.
 
 import sys
-sys.path.append('..')
+#Don't need this line if the package was installed.
+sys.path.append('../build/lib')
+
 import multiprocessing
 
 import bbsvm.bsgd_ensemble as ens
@@ -31,7 +33,6 @@ a9a_ens = ens.BSGDEnsemble(
     num_classifiers=7,
     base_params={'gamma':1e1, 'L':1e-3},
     num_procs=multiprocessing.cpu_count())
-
 
 a9a_ens.train('a9a_train.txt')
 a9a_ens.test('a9a_test.txt')

@@ -9,17 +9,15 @@ This is a straightforward implementation of the method studied in this paper :
 > Presented in *NIPS 2013 Workshop on Big Learning: Advances in Algorithms and Data Management*, (p. 5),  2013.
 
 
-Everything was tested with python 3.3.
-
 ### Usage :
 
-*WARNING: My setup.py is pretty hackish, I only use setuptools to build the dependencies and do not recommend installing with `python setup.py install`.*
+Warning: everything was only tested with python 3.3.
 
 Build the dependencies with the python setup script :
 
     python setup.py build
 
-Then you can run the sample, `cd` into the samples directory and run the `sample_a9a.py` script.
+Then you can run the sample, `cd` into the samples directory and run the `sample_a9a.py` script. If you want to be able to call the package system-wide, simple run `python setup.py install`.
 
 ### Paper and abstract :
 

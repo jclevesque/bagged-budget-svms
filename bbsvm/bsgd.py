@@ -33,7 +33,7 @@ class BudgetSVM():
     """
     Wrapper around the budgetsvm library as provided by the its
      authors. Requires two executables, budgetsvm-train and
-     budgetsvm-predict (will look for them in ../build/lib)
+     budgetsvm-predict (will look for them in ..)
     """
     def __init__(self, file_affix='', epochs=1, algorithm=4, L=0.0001,
      budget=100, budget_strategy=0, gamma=-1, bias=False, z=50000,
@@ -84,7 +84,7 @@ class BudgetSVM():
         else:
             self.random_seed = np.random.randint(1000000000)
 
-        self.exec_path = '../build/lib/'
+        self.exec_path = os.path.dirname(__file__)
 
         self.model_filen = os.path.join(self.output_folder, 'bsgd_model' +
             file_affix)
@@ -111,7 +111,7 @@ class BudgetSVM():
 
         #WARNING: Using the same model filename all the time, not thread safe
         #for stuff like replications without changing this.
-        cmd = self.exec_path + 'budgetedsvm-train' + options + ' ' + train_data +\
+        cmd = self.exec_path + '/budgetedsvm-train' + options + ' ' + train_data +\
          ' ' + self.model_filen
         cmd = cmd.split(' ')
 
@@ -136,7 +136,7 @@ class BudgetSVM():
         options = '-z {} -v {}'.format(self.z, 1)
 
         #performance
-        cmd = self.exec_path + 'budgetedsvm-predict ' + options + ' ' + data +\
+        cmd = self.exec_path + '/budgetedsvm-predict ' + options + ' ' + data +\
          ' ' + self.model_filen + ' ' + self.prediction_filen
         print(cmd)
         cmd = cmd.split(' ')

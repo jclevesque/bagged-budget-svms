@@ -75,7 +75,7 @@ class build_bbsvm(build):
 
         if not self.dry_run:
             for target in target_files:
-                self.copy_file(target, self.build_lib)
+                self.copy_file(target, self.build_lib + '/bbsvm')
 
 
 class install_bbsvm(install):

@@ -11,15 +11,21 @@ This is a straightforward implementation of the method studied in this paper :
 Supports the training and computation of predictions in parallel through multiprocessing. More sophisticated approaches could be developed to permit the exploitation of computing clusters.
 
 
-### Usage :
+### Setup / Usage :
 
 Warning: everything was only tested with python 3.3.
 
-Build the dependencies with the python setup script :
+Dependencies:
+
+- setuptools
+- numpy
+- budgetedsvm toolbox (included)
+
+First build the budgetedsvm-toolbox with the python setup script :
 
     python setup.py build
 
-Then you can run the sample, `cd` into the samples directory and run the `a9a.py` script, which will train an ensemble of 7 budgeted kernel SVMs on the a9a dataset. If you want to be able to call the package system-wide, simple run `python setup.py install`.
+Then you can run the sample, `cd` into the samples directory and run the `a9a.py` script, which will train an ensemble of 7 budgeted kernel SVMs on the a9a dataset. If you want to be able to call the `bbsvm` package system-wide, simply install it with `python setup.py install`.
 
 ### Paper and abstract :
 

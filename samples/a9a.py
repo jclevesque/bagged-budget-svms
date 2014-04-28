@@ -30,9 +30,12 @@ import multiprocessing
 import bbsvm.bsgd_ensemble as ens
 
 a9a_ens = ens.BSGDEnsemble(
-    num_classifiers=7,
-    base_params={'gamma':1e1, 'L':1e-3},
-    num_procs=multiprocessing.cpu_count())
+    num_classifiers=7, #number of classifiers in the ensemble
+    base_params={ #base parameters applicable to each BSGD in the ensemble
+     'gamma':1e1, #width of the RBF kernel
+     'L':1e-3}, #regularization penalty
+    num_procs=multiprocessing.cpu_count() #number of processes for training and testing
+    )
 
 a9a_ens.train('a9a_train.txt')
-a9a_ens.test('a9a_test.txt')
+a9a_ens.test('a9a_test.txt') #test, will output accuracy score.

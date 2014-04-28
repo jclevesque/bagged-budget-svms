@@ -8,6 +8,8 @@ This is a straightforward implementation of the method studied in this paper :
 > Julien-Charles Lévesque, Christian Gagné and Robert Sabourin.
 > Presented in *NIPS 2013 Workshop on Big Learning: Advances in Algorithms and Data Management*, (p. 5),  2013.
 
+Supports the training and computation of predictions in parallel through multiprocessing. More sophisticated approaches could be developed to permit the exploitation of computing clusters.
+
 
 ### Usage :
 
@@ -17,7 +19,7 @@ Build the dependencies with the python setup script :
 
     python setup.py build
 
-Then you can run the sample, `cd` into the samples directory and run the `sample_a9a.py` script. If you want to be able to call the package system-wide, simple run `python setup.py install`.
+Then you can run the sample, `cd` into the samples directory and run the `a9a.py` script, which will train an ensemble of 7 budgeted kernel SVMs on the a9a dataset. If you want to be able to call the package system-wide, simple run `python setup.py install`.
 
 ### Paper and abstract :
 

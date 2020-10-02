@@ -13,10 +13,11 @@ Supports the training and computation of predictions in parallel through multipr
 
 ### Setup / Usage :
 
-Warning: everything was only tested with python 3.3.
+Warning: everything was only tested on Linux with python 3.3.
 
 Dependencies:
 
+- make
 - setuptools
 - numpy
 - budgetedsvm toolbox (included)
